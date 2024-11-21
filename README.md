@@ -16,7 +16,7 @@ El proyecto consiste en la creación de un equipo médico que envía señales bi
        - **css**: Archivos relacionados con la estética visual del sitio.
        - **images**: Imágenes accesorias utilizadas en el sitio.
        - **js**:
-         - Scripts de funcionalidad que procesan las señales de bpm y rpm, manejan la conexión con Arduino y generan el archivo `.csv`.
+         - Scripts de funcionalidad.
      - **guardarCSV.py**: Código que crea el archivo `EjemploRegistro.csv` y carga los datos proporcionados por Arduino.
 
 3. **Ejecutar el sitio web**:
