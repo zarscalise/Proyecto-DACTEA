@@ -42,7 +42,7 @@ El proyecto consiste en la creación de un equipo médico que envía señales bi
 
 ![Gráficos de datos](Fotos/WEB2.jpeg)
 
-### Configuración en Visual Studio Code
+### Vista en Visual Studio Code al detectar activación
 
 ![Configuración en VSC](Fotos/VSC.jpeg)
 
