@@ -12,7 +12,7 @@ Consta de la creación de un equipo médico el cual manda señales biomédicas a
       - js
           - Scrip de funcionalidad.
           - Contiene las funciones de procesamiento de bpm y rpm, la conexión a Arduino, y la creación del .csv.
-      - guardarCSV.py - Código encargado de la creación del archivo Registro.csv y la carga de datos según Arduino lo indique. 
+  - guardarCSV.py - Código encargado de la creación del archivo EjemploRegistro.csv y la carga de datos según Arduino lo indique. 
 3. A la izquierda de la barra inferior, seleccionar _Go Live_. Esto ejecutará la página web.
 4. Correr el archivo DACTEA-arduino.ino en Arduino IDE.
-5. Correr el archivo guardarCSV.py en Visual Studio Code (con control+C genera una interrupción a partir de la cual se actualiza el archivo Registro.csv y se visualizan los datos en la tabla del sitio web.)
+5. Correr el archivo guardarCSV.py en Visual Studio Code (con control+C genera una interrupción a partir de la cual se actualiza el archivo Registro.csv y se visualizan los datos en la tabla del sitio web).
