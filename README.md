@@ -1,6 +1,8 @@
 # Proyecto DACTEA
 
-![Logo](Fotos/logo.png)
+<div style="text-align: right;">
+  <img src="Fotos/logo.png" alt="Logo" width="150">
+</div>
 
 El proyecto consiste en la creación de un equipo médico que envía señales biomédicas a Arduino. Estas señales se registran y, según condiciones umbral, se dispara una respuesta. La activación del equipo queda registrada en un sitio web realizado con los lenguajes HTML, CSS, JS y Python.
 
