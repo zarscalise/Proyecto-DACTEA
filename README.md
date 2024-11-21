@@ -15,8 +15,7 @@ El proyecto consiste en la creación de un equipo médico que envía señales bi
      - **Carpeta assets**:
        - **css**: Archivos relacionados con la estética visual del sitio.
        - **images**: Imágenes accesorias utilizadas en el sitio.
-       - **js**:
-         - Scripts de funcionalidad.
+       - **js**: Scripts de funcionalidad.
      - **guardarCSV.py**: Código que crea el archivo `EjemploRegistro.csv` y carga los datos proporcionados por Arduino.
 
 3. **Ejecutar el sitio web**:
