@@ -1,0 +1,43 @@
+import serial
+import csv
+import datetime
+import os
+
+# Configura el puerto serial (reemplaza 'COM3' por el puerto correcto en tu sistema)
+ser = serial.Serial('/dev/cu.usbserial-1410', 115200, timeout=1)
+
+# Especifica la ruta del archivo
+ruta_archivo = r'/Users/zarscalise/Desktop/DACTEA-website/EjemploRegistro.csv' 
+
+# Asegúrate de que la carpeta exista
+os.makedirs(os.path.dirname(ruta_archivo), exist_ok=True)
+
+# Abre o crea el archivo CSV en modo de agregar ('a')
+with open(ruta_archivo, mode='a', newline='') as file:
+    writer = csv.writer(file)
+    
+    # Escribe la cabecera si el archivo está vacío
+    if file.tell() == 0:
+        writer.writerow(['Fecha', 'Hora', 'Evento'])
+    
+    try:
+        while True:
+            # Lee una línea del puerto serial
+            line = ser.readline().decode('utf-8').rstrip()
+            if line:
+                if line == "Inicio inflado": #ACA PONER INICIO INFLADO Y EN ARDUINO
+                    # Obtiene la fecha y hora actuales
+                    now = datetime.datetime.now()
+                    fecha = now.strftime('%Y-%m-%d')
+                    hora = now.strftime('%H:%M:%S')
+                    
+                    # Escribe los datos en el archivo CSV
+                    writer.writerow([fecha, hora, line])
+                    print(f"{fecha} {hora} - {line}")
+                else:
+                    # Opcional: Imprime los mensajes que no se guardan
+                    print(f"Mensaje no guardado: {line}")
+    except KeyboardInterrupt:
+        print("Programa detenido por el usuario.")
+    finally:
+        ser.close()
